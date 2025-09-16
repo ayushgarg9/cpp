@@ -1,32 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
-// int main(){
-//     int n,sum;
-//     cin>>n;
-//     sum = 0;
-//     int i = 0;
-//     while(i<=n){
-//         sum = sum + i;
-//         i+=2;
-//     }
-//     cout << "the sum is " << sum << endl;
-
-// }
-
-
-//subtract the product and sum od digits in an integer
 int main(){
-    int n;
-    cout << "enter n: " <<endl;
-    cin>> n;
-    int pro1 = 1,sum1 = 0;
-    int digit;
-    while(n>1){
-        digit = n%10;
-        pro1 *= digit;
-        digit = n%10;
-        sum1 += digit;
-        n = n/10;
+    // finding smallest element in array by linear search
+    // int arr[5]={3,6,9,1,5};
+    // int smallest = INT_MAX;
+    // int sizeofarr = 5;
+    // for(int i =0;i<sizeofarr;i++){
+    //     smallest = min(arr[i],smallest);
+    // }
+    // cout<<"smallest in array 1 is "<<smallest;
+
+    // finding largest element in array by linear search
+    // int arr[5]={3,6,9,1,5};
+    // int largest = INT_MIN;
+    // int sizeofarr = 5;
+    // for(int i =0;i<sizeofarr;i++){
+    //     largest = max(arr[i],largest);
+    // }
+    // cout<<"largest in array 1 is "<<largest;
+
+    // finding index also 
+    int arr[5]={3,6,2,1,9};
+    int largest = INT_MIN;
+    int sizeofarr = 5;
+    int count = -1;
+    for(int i =0;i<sizeofarr;i++){
+        if(arr[i]>largest){
+            largest = arr[i];
+            count++;
+        }
     }
-    cout << pro1-sum1 << endl;
+    cout<<"largest element in array 1 is " <<largest <<" its index is "<< count;
 }
